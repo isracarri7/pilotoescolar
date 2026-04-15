@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduFlow — Sistema Escolar Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); }
+    .card-hover { transition: all 0.2s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .tab-active { background: #2563eb; color: white; }
+    .tab-inactive { background: #f1f5f9; color: #64748b; }
+    .sidebar-active { background: #eff6ff; color: #2563eb; border-left: 3px solid #2563eb; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- NAVEGACIÓN -->
+<nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 gradient-bg rounded-lg flex items-center justify-center">
+        <span class="text-white font-bold text-sm">EF</span>
+      </div>
+      <span class="text-xl font-bold text-gray-900">EduFlow</span>
+    </div>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+      <a href="#modulos" class="hover:text-blue-600">Módulos</a>
+      <a href="#automatizaciones" class="hover:text-blue-600">Automatizaciones</a>
+      <a href="#precios" class="hover:text-blue-600">Precios</a>
+      <a href="#demo" class="hover:text-blue-600">Demo</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="text-sm font-medium text-gray-600 hover:text-blue-600">Iniciar sesión</button>
+      <button class="gradient-bg text-white text-sm font-medium px-4 py-2 rounded-lg hover:opacity-90">
+        Solicitar demo →
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="gradient-bg text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <span class="bg-blue-400 bg-opacity-30 text-blue-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+      Nuevo · Sistema completo para escuelas mexicanas
+    </span>
+    <h1 class="text-5xl font-bold mt-6 leading-tight">
+      Tu escuela en piloto<br>automático
+    </h1>
+    <p class="text-blue-100 text-xl mt-4 max-w-2xl mx-auto">
+      Cobros automáticos, boletas digitales, portal de padres y comunicación por WhatsApp. Todo en un solo sistema diseñado para institutos privados en México.
+    </p>
+    <div class="flex items-center justify-center gap-4 mt-8">
+      <button class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:shadow-lg transition">
+        Ver demostración en vivo
+      </button>
+      <button class="border border-blue-300 text-white font-medium px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+        Piloto gratis 15 días →
+      </button>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-8 text-sm text-blue-200">
+      <span>✓ Sin contratos largos</span>
+      <span>✓ Soporte en español</span>
+      <span>✓ Implementación en 48hrs</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <div class="text-3xl font-bold text-blue-600">60%</div>
+      <div class="text-sm text-gray-500 mt-1">Reducción en carga administrativa</div>
+    </div>
+    <div>
+      <div class="text-3xl font-bold text-green-600">+35%</div>
+      <div class="text-sm text-gray-500 mt-1">Más pagos cobrados a tiempo</div>
+    </div>
+    <div>
+      <div class="text-3xl font-bold text-purple-600">0 hrs</div>
+      <div class="text-sm text-gray-500 mt-1">En envío manual de avisos</div>
+    </div>
+    <div>
+      <div class="text-3xl font-bold text-orange-600">48 hrs</div>
+      <div class="text-sm text-gray-500 mt-1">Tiempo de implementación</div>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULOS -->
+<section id="modulos" class="py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">Un ecosistema completo</h2>
+      <p class="text-gray-500 mt-2">Todos los módulos que tu escuela necesita, conectados entre sí</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Módulo 1 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">🏫</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">Portal Web Escolar</h3>
+        <p class="text-gray-500 text-sm mt-2">Página pública de tu instituto + portal privado para padres con acceso a calificaciones, pagos y comunicados.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Página pública del instituto</li>
+          <li>✓ Portal de padres con login</li>
+          <li>✓ Formulario de inscripción online</li>
+          <li>✓ Calendario escolar digital</li>
+        </ul>
+      </div>
+
+      <!-- Módulo 2 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">💰</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">Control de Pagos</h3>
+        <p class="text-gray-500 text-sm mt-2">Gestiona colegiaturas, inscripciones y cualquier concepto. Con cobro en línea via MercadoPago integrado.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Estado de cuenta por alumno</li>
+          <li>✓ Cobro en línea (MercadoPago)</li>
+          <li>✓ Reportes de cobranza</li>
+          <li>✓ Corte de caja automático</li>
+        </ul>
+      </div>
+
+      <!-- Módulo 3 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">📊</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">Calificaciones y Boletas</h3>
+        <p class="text-gray-500 text-sm mt-2">Captura de calificaciones por materia y período. Genera y envía boletas en PDF automáticamente a los padres.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Captura por materia/período</li>
+          <li>✓ Boletas PDF con logo del instituto</li>
+          <li>✓ Envío automático por WhatsApp</li>
+          <li>✓ Alertas de materias reprobadas</li>
+        </ul>
+      </div>
+
+      <!-- Módulo 4 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">✅</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">Control de Asistencia</h3>
+        <p class="text-gray-500 text-sm mt-2">Lista de pase digital por grupo. Notifica automáticamente al padre cuando el alumno no se presenta.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Registro diario por grupo</li>
+          <li>✓ Alerta a padre antes de las 10am</li>
+          <li>✓ Reporte mensual de asistencia</li>
+          <li>✓ Control de tardanzas y justificantes</li>
+        </ul>
+      </div>
+
+      <!-- Módulo 5 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">💬</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">WhatsApp Automático</h3>
+        <p class="text-gray-500 text-sm mt-2">Comunicación inteligente con padres. Mensajes personalizados, recordatorios, boletas y avisos masivos sin intervención humana.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Recordatorios de pago personalizados</li>
+          <li>✓ Avisos masivos por grado</li>
+          <li>✓ Bot de consulta de adeudos</li>
+          <li>✓ Confirmaciones automáticas</li>
+        </ul>
+      </div>
+
+      <!-- Módulo 6 -->
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 card-hover">
+        <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
+          <span class="text-2xl">📈</span>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg">Reportes y Dashboard</h3>
+        <p class="text-gray-500 text-sm mt-2">El director ve en tiempo real el estado financiero y académico. Reportes automáticos cada lunes en su WhatsApp.</p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>✓ Dashboard en tiempo real</li>
+          <li>✓ Reporte semanal automático</li>
+          <li>✓ Comparativa mensual de cobranza</li>
+          <li>✓ Alertas de indicadores críticos</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEMO DASHBOARD -->
+<section id="demo" class="bg-gray-900 py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-white">Panel administrativo</h2>
+      <p class="text-gray-400 mt-2">Así se ve el sistema desde la perspectiva del director o administrativo</p>
+    </div>
+
+    <!-- Dashboard Mockup -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
+      <!-- Dashboard Header -->
+      <div class="bg-gray-900 text-white px-6 py-3 flex items-center gap-2">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <span class="ml-3 text-gray-400 text-sm">app.eduflow.mx/admin</span>
+      </div>
+
+      <div class="flex h-screen max-h-[600px]">
+        <!-- Sidebar -->
+        <div class="w-56 bg-gray-50 border-r border-gray-200 flex flex-col">
+          <div class="p-4 border-b border-gray-200">
+            <div class="text-sm font-bold text-gray-900">Instituto Cervantes</div>
+            <div class="text-xs text-gray-500 mt-0.5">Ciclo 2025-2026</div>
+          </div>
+          <nav class="p-3 space-y-1 flex-1">
+            <div class="sidebar-active flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer">
+              <span>📊</span> Dashboard
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>👥</span> Alumnos
+              <span class="ml-auto bg-blue-100 text-blue-600 text-xs px-1.5 rounded-full">247</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>💰</span> Pagos
+              <span class="ml-auto bg-red-100 text-red-600 text-xs px-1.5 rounded-full">38</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>📝</span> Calificaciones
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>✅</span> Asistencia
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>💬</span> WhatsApp
+            </div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 cursor-pointer">
+              <span>📈</span> Reportes
+            </div>
+          </nav>
+          <div class="p-4 border-t border-gray-200">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">D</div>
+              <div>
+                <div class="text-xs font-medium text-gray-900">Director</div>
+                <div class="text-xs text-gray-500">Admin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-auto bg-white">
+          <!-- Top Bar -->
+          <div class="border-b border-gray-200 px-6 py-3 flex items-center justify-between">
+            <div>
+              <h1 class="text-base font-bold text-gray-900">Dashboard General</h1>
+              <p class="text-xs text-gray-500">Lunes 14 de Abril, 2026</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="text-xs bg-green-50 text-green-600 font-medium px-3 py-1.5 rounded-lg border border-green-200">
+                + Registrar pago
+              </button>
+              <button class="text-xs bg-blue-50 text-blue-600 font-medium px-3 py-1.5 rounded-lg border border-blue-200">
+                📢 Enviar aviso
+              </button>
+              <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-sm">🔔</div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-4 gap-4 mb-6">
+              <div class="bg-blue-50 rounded-xl p-4">
+                <div class="text-xs text-blue-500 font-medium">Recaudado este mes</div>
+                <div class="text-2xl font-bold text-blue-700 mt-1">$312,500</div>
+                <div class="text-xs text-blue-400 mt-1">↑ 8% vs mes anterior</div>
+              </div>
+              <div class="bg-red-50 rounded-xl p-4">
+                <div class="text-xs text-red-500 font-medium">Pagos pendientes</div>
+                <div class="text-2xl font-bold text-red-700 mt-1">38</div>
+                <div class="text-xs text-red-400 mt-1">$57,000 por cobrar</div>
+              </div>
+              <div class="bg-green-50 rounded-xl p-4">
+                <div class="text-xs text-green-500 font-medium">Asistencia hoy</div>
+                <div class="text-2xl font-bold text-green-700 mt-1">94%</div>
+                <div class="text-xs text-green-400 mt-1">233 de 247 presentes</div>
+              </div>
+              <div class="bg-purple-50 rounded-xl p-4">
+                <div class="text-xs text-purple-500 font-medium">WhatsApp enviados</div>
+                <div class="text-2xl font-bold text-purple-700 mt-1">186</div>
+                <div class="text-xs text-purple-400 mt-1">Este mes, automáticos</div>
+              </div>
+            </div>
+
+            <!-- Two columns -->
+            <div class="grid grid-cols-3 gap-4">
+              <!-- Pagos pendientes table -->
+              <div class="col-span-2 bg-white rounded-xl border border-gray-200">
+                <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between">
+                  <span class="text-sm font-semibold text-gray-900">Pagos pendientes este mes</span>
+                  <button class="text-xs text-blue-600 font-medium">Enviar recordatorios →</button>
+                </div>
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="bg-gray-50">
+                      <th class="text-left px-4 py-2 text-gray-500 font-medium">Alumno</th>
+                      <th class="text-left px-4 py-2 text-gray-500 font-medium">Grupo</th>
+                      <th class="text-left px-4 py-2 text-gray-500 font-medium">Monto</th>
+                      <th class="text-left px-4 py-2 text-gray-500 font-medium">Estado</th>
+                      <th class="text-left px-4 py-2 text-gray-500 font-medium">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                      <td class="px-4 py-2.5 font-medium text-gray-900">María García López</td>
+                      <td class="px-4 py-2.5 text-gray-500">3°A</td>
+                      <td class="px-4 py-2.5 text-gray-900">$1,500</td>
+                      <td class="px-4 py-2.5"><span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">Vence hoy</span></td>
+                      <td class="px-4 py-2.5"><button class="text-blue-600 hover:underline">Recordar</button></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td class="px-4 py-2.5 font-medium text-gray-900">Carlos Pérez Ruiz</td>
+                      <td class="px-4 py-2.5 text-gray-500">3°A</td>
+                      <td class="px-4 py-2.5 text-gray-900">$1,500</td>
+                      <td class="px-4 py-2.5"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Vencido 5 días</span></td>
+                      <td class="px-4 py-2.5"><button class="text-blue-600 hover:underline">Recordar</button></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td class="px-4 py-2.5 font-medium text-gray-900">Diego Torres Vega</td>
+                      <td class="px-4 py-2.5 text-gray-500">4°C</td>
+                      <td class="px-4 py-2.5 text-gray-900">$1,500</td>
+                      <td class="px-4 py-2.5"><span class="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">Vence en 3 días</span></td>
+                      <td class="px-4 py-2.5"><button class="text-blue-600 hover:underline">Recordar</button></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td class="px-4 py-2.5 font-medium text-gray-900">Valeria Sánchez Cruz</td>
+                      <td class="px-4 py-2.5 text-gray-500">1°A</td>
+                      <td class="px-4 py-2.5 text-gray-900">$2,000</td>
+                      <td class="px-4 py-2.5"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Vencido 12 días</span></td>
+                      <td class="px-4 py-2.5"><button class="text-blue-600 hover:underline">Recordar</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Right column -->
+              <div class="space-y-4">
+                <!-- Automation status -->
+                <div class="bg-white rounded-xl border border-gray-200 p-4">
+                  <div class="text-sm font-semibold text-gray-900 mb-3">Automatizaciones activas</div>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span class="text-xs text-gray-600 flex-1">Recordatorio de cobro</span>
+                      <span class="text-xs text-green-600 font-medium">ACTIVO</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span class="text-xs text-gray-600 flex-1">Alerta de inasistencia</span>
+                      <span class="text-xs text-green-600 font-medium">ACTIVO</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span class="text-xs text-gray-600 flex-1">Confirmación de pago</span>
+                      <span class="text-xs text-green-600 font-medium">ACTIVO</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                      <span class="text-xs text-gray-400 flex-1">Envío de boletas</span>
+                      <span class="text-xs text-gray-400">Fin período</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick actions -->
+                <div class="bg-white rounded-xl border border-gray-200 p-4">
+                  <div class="text-sm font-semibold text-gray-900 mb-3">Acciones rápidas</div>
+                  <div class="space-y-2">
+                    <button class="w-full text-left text-xs bg-blue-50 text-blue-700 px-3 py-2 rounded-lg hover:bg-blue-100">
+                      💬 Aviso masivo a padres
+                    </button>
+                    <button class="w-full text-left text-xs bg-green-50 text-green-700 px-3 py-2 rounded-lg hover:bg-green-100">
+                      📄 Generar boletas del período
+                    </button>
+                    <button class="w-full text-left text-xs bg-purple-50 text-purple-700 px-3 py-2 rounded-lg hover:bg-purple-100">
+                      📊 Reporte de cobranza
+                    </button>
+                    <button class="w-full text-left text-xs bg-orange-50 text-orange-700 px-3 py-2 rounded-lg hover:bg-orange-100">
+                      🔔 Enviar recordatorios pendientes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATIZACIONES -->
+<section id="automatizaciones" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">Motor de automatización</h2>
+      <p class="text-gray-500 mt-2">n8n corre en segundo plano, trabajando por ti las 24 horas</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">💸</span>
+          <div>
+            <div class="font-bold text-gray-900">Secuencia de cobranza</div>
+            <div class="text-xs text-gray-500">Se activa cada día 25 del mes</div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+            Lee Google Sheets → encuentra pagos PENDIENTES
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+            Busca teléfono del tutor en base de datos
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+            Envía WhatsApp personalizado con monto y fecha
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+            Marca como "recordatorio enviado" en el sistema
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-6 border border-yellow-200">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">🏫</span>
+          <div>
+            <div class="font-bold text-gray-900">Alerta de inasistencia</div>
+            <div class="text-xs text-gray-500">Se activa al tomar lista cada mañana</div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+            Maestro registra asistencia en sistema
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+            n8n detecta alumnos marcados como AUSENTE
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+            Manda WhatsApp al padre antes de las 10am
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+            Registra la notificación enviada con hora y fecha
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 border border-purple-200">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">📄</span>
+          <div>
+            <div class="font-bold text-gray-900">Envío de boletas automático</div>
+            <div class="text-xs text-gray-500">Al cerrar cada período calificador</div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+            Director cierra el período en el sistema
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+            n8n genera PDF de boleta por cada alumno
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+            Envía boleta por WhatsApp a cada tutor
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+            Genera alerta si hay materias reprobadas
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">📊</span>
+          <div>
+            <div class="font-bold text-gray-900">Reporte semanal al director</div>
+            <div class="text-xs text-gray-500">Todos los lunes a las 8am</div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+            Consolida datos de la semana anterior
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+            Calcula % recaudado, asistencia promedio
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+            Manda resumen al WhatsApp del director
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 flex items-center gap-2">
+            <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+            Sin que nadie lo tenga que generar manualmente
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL PADRES MOCKUP -->
+<section class="py-20 px-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wide">Portal de padres</span>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2">Los padres acceden a todo desde su celular</h2>
+        <p class="text-gray-500 mt-4">Sin llamadas, sin visitas a la escuela. El padre ve calificaciones, paga la colegiatura y recibe comunicados desde su teléfono.</p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+            <span class="text-sm text-gray-600">Ver boletas y calificaciones de todos sus hijos</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+            <span class="text-sm text-gray-600">Consultar estado de cuenta y pagar en línea</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+            <span class="text-sm text-gray-600">Leer comunicados y circulares del instituto</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+            <span class="text-sm text-gray-600">Solicitar documentos (constancias, certificados)</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="flex justify-center">
+        <div class="w-72 bg-white rounded-3xl shadow-2xl border-8 border-gray-900 overflow-hidden">
+          <!-- Status bar -->
+          <div class="bg-gray-900 text-white text-xs px-4 py-1.5 flex justify-between">
+            <span>9:41</span>
+            <span>●●●</span>
+          </div>
+          <!-- App header -->
+          <div class="gradient-bg text-white px-4 py-4">
+            <div class="text-xs opacity-80">Bienvenida,</div>
+            <div class="font-bold">Ana Ruiz Morales</div>
+            <div class="text-xs opacity-80 mt-0.5">Mamá de Carlos Pérez · 3°A</div>
+          </div>
+          <!-- Content -->
+          <div class="p-4 space-y-3">
+            <!-- Estado de cuenta -->
+            <div class="bg-red-50 rounded-xl p-3 border border-red-100">
+              <div class="text-xs font-semibold text-red-700">⚠ Pago pendiente</div>
+              <div class="text-lg font-bold text-red-600 mt-1">$1,500 MXN</div>
+              <div class="text-xs text-red-500">Colegiatura Abril 2026</div>
+              <button class="mt-2 w-full bg-red-600 text-white text-xs font-medium py-2 rounded-lg">
+                Pagar ahora con tarjeta →
+              </button>
+            </div>
+
+            <!-- Calificaciones -->
+            <div class="bg-white rounded-xl p-3 border border-gray-200">
+              <div class="text-xs font-semibold text-gray-700 mb-2">Calificaciones 2° Bimestre</div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <span class="text-gray-600">Matemáticas</span>
+                  <span class="font-bold text-green-600">9.2</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span class="text-gray-600">Español</span>
+                  <span class="font-bold text-green-600">8.8</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span class="text-gray-600">Ciencias</span>
+                  <span class="font-bold text-yellow-600">7.5</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span class="text-gray-600">Historia</span>
+                  <span class="font-bold text-green-600">9.0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Asistencia -->
+            <div class="bg-green-50 rounded-xl p-3 border border-green-100">
+              <div class="text-xs font-semibold text-green-700">Asistencia este mes</div>
+              <div class="flex items-center gap-2 mt-1">
+                <div class="flex-1 bg-green-200 rounded-full h-2">
+                  <div class="bg-green-600 rounded-full h-2" style="width:95%"></div>
+                </div>
+                <span class="text-xs font-bold text-green-700">95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">Planes y precios</h2>
+      <p class="text-gray-500 mt-2">Empieza con lo que duele. Crece cuando estés listo.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Starter -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6">
+        <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Starter</div>
+        <div class="mt-3">
+          <span class="text-4xl font-bold text-gray-900">$1,800</span>
+          <span class="text-gray-500 text-sm"> MXN/mes</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">Setup: $4,500 MXN (única vez)</div>
+        <div class="text-xs text-gray-500 mt-1">Hasta 80 alumnos</div>
+
+        <hr class="my-4">
+
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Recordatorios de colegiatura WhatsApp</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Confirmación de pagos recibidos</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Envío de boletas en PDF</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Avisos masivos a padres</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Soporte básico</li>
+        </ul>
+
+        <button class="mt-6 w-full border border-blue-600 text-blue-600 font-medium py-2.5 rounded-xl hover:bg-blue-50 transition">
+          Empezar piloto gratis
+        </button>
+      </div>
+
+      <!-- Growth (highlighted) -->
+      <div class="bg-blue-600 rounded-2xl p-6 text-white relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
+          MÁS POPULAR
+        </div>
+        <div class="text-sm font-semibold text-blue-200 uppercase tracking-wide">Growth</div>
+        <div class="mt-3">
+          <span class="text-4xl font-bold">$3,500</span>
+          <span class="text-blue-200 text-sm"> MXN/mes</span>
+        </div>
+        <div class="text-xs text-blue-300 mt-1">Setup: $9,000 MXN (única vez)</div>
+        <div class="text-xs text-blue-300 mt-1">80 a 250 alumnos</div>
+
+        <hr class="my-4 border-blue-500">
+
+        <ul class="space-y-2 text-sm text-blue-100">
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Todo lo de Starter</li>
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Portal de padres (calificaciones)</li>
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Inscripción online</li>
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Control de asistencia + alertas</li>
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Integración MercadoPago</li>
+          <li class="flex items-center gap-2"><span class="text-blue-200">✓</span> Reporte semanal al director</li>
+        </ul>
+
+        <button class="mt-6 w-full bg-white text-blue-600 font-medium py-2.5 rounded-xl hover:bg-blue-50 transition">
+          Solicitar demo →
+        </button>
+      </div>
+
+      <!-- Full -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6">
+        <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Full</div>
+        <div class="mt-3">
+          <span class="text-4xl font-bold text-gray-900">$6,500</span>
+          <span class="text-gray-500 text-sm"> MXN/mes</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">Setup: $18,000 MXN (única vez)</div>
+        <div class="text-xs text-gray-500 mt-1">250+ alumnos</div>
+
+        <hr class="my-4">
+
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Todo lo de Growth</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Panel administrativo completo</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Bot de WhatsApp para consultas</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Dashboard analytics en tiempo real</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Capacitación al personal</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Soporte prioritario</li>
+        </ul>
+
+        <button class="mt-6 w-full border border-blue-600 text-blue-600 font-medium py-2.5 rounded-xl hover:bg-blue-50 transition">
+          Contactar
+        </button>
+      </div>
+    </div>
+
+    <!-- ROI Note -->
+    <div class="mt-10 bg-green-50 rounded-2xl p-6 border border-green-100 text-center">
+      <div class="text-lg font-bold text-green-800">¿Cuánto te cuesta NO tener esto?</div>
+      <p class="text-green-700 text-sm mt-2 max-w-2xl mx-auto">
+        Una escuela de 150 alumnos que cobra $1,500/mes pierde en promedio <strong>$30,000-$45,000 MXN</strong> al año en colegiaturas no cobradas a tiempo por falta de seguimiento. EduFlow se paga solo en el primer mes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-400 py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xs">EF</span>
+        </div>
+        <span class="text-white font-bold">EduFlow</span>
+      </div>
+      <p class="text-sm">La plataforma todo-en-uno para institutos privados en México.</p>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm">Producto</div>
+      <ul class="space-y-2 text-sm">
+        <li>Portal Web</li>
+        <li>Control de Pagos</li>
+        <li>WhatsApp Automático</li>
+        <li>Boletas Digitales</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm">Empresa</div>
+      <ul class="space-y-2 text-sm">
+        <li>Nosotros</li>
+        <li>Blog</li>
+        <li>Casos de éxito</li>
+        <li>Contacto</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm">Contacto</div>
+      <div class="text-sm space-y-2">
+        <div>📱 WhatsApp directo</div>
+        <div>📧 hola@eduflow.mx</div>
+        <div>🇲🇽 México</div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-gray-800 text-xs text-center">
+    © 2026 EduFlow · Automatización escolar con n8n + WhatsApp
+  </div>
+</footer>
+
+</body>
+</html>
